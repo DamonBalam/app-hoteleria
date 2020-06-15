@@ -73,7 +73,7 @@
         data() {
             return {
                 items: [
-                    {title: "Dashboard", icon: "mdi-view-dashboard", path: "/"},
+                    {title: "Dashboard", icon: "mdi-view-dashboard", path: "/dashboard"},
                     {title: "Huéspedes", icon: "mdi-account-supervisor", path: "/huesped-lista"},
                     {title: "Venta", icon: "mdi-cart", path: "/punto-venta"},
                     {title: "Caja", icon: "mdi-cash-register", path: "/caja"},

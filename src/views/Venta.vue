@@ -74,8 +74,12 @@
                 </v-col>
                 <v-row class="pa-7" justify="space-between">
 
-                    <v-btn color="orange darken-1" dark>COTIZAR</v-btn>
-                    <v-btn color="teal darken-2" dark>REGISTRAR COMPRA</v-btn>
+                    <v-btn color="orange darken-1" dark>COTIZAR
+                        <v-icon right small>mdi-clipboard-check</v-icon>
+                    </v-btn>
+                    <v-btn color="teal darken-2" dark>REGISTRAR COMPRA
+                        <v-icon right small>mdi-content-save-move</v-icon>
+                    </v-btn>
                 </v-row>
             </v-row>
         </v-card>

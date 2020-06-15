@@ -7,6 +7,10 @@ Vue.use(VueRouter)
 const routes = [
     {
         path: '/',
+        redirect: '/punto-venta'
+    },
+    {
+        path: '/dashboard',
         name: 'Dashboard',
         component: Dashboard
     },
