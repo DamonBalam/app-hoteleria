@@ -1,7 +1,7 @@
 <template>
     <v-navigation-drawer
             v-model="drawer"
-            color="teal darken-1"
+            color="purple lighten-1"
             :expand-on-hover="expandOnHover"
             :mini-variant="miniVariant"
             :right="true"
@@ -12,7 +12,7 @@
         <v-list dense nav class="py-0">
             <v-list-item two-line :class="miniVariant && 'px-0'" @click="menu">
                 <v-list-item-avatar>
-                    <img src="https://randomuser.me/api/portraits/men/81.jpg" />
+                    <img src="https://randomuser.me/api/portraits/men/81.jpg"/>
                 </v-list-item-avatar>
 
                 <v-list-item-content>
@@ -46,9 +46,12 @@
         data() {
             return {
                 items: [
-                    { title: "Dashboard", icon: "mdi-view-dashboard", path: "/" },
-                    { title: "Tickets", icon: "mdi-cards" },
-                    { title: "Configuración", icon: "mdi-cogs" }
+                    {title: "Dashboard", icon: "mdi-view-dashboard", path: "/"},
+                    {title: "Huéspedes", icon: "mdi-account-supervisor", path: "/huesped-lista"},
+                    {title: "Venta", icon: "mdi-cart", path: "/venta"},
+                    {title: "Caja", icon: "mdi-inbox-full", path: "/caja"},
+                    {title: "Reportes", icon: "mdi-file-chart", path: "/reportes"},
+                    {title: "Configuración", icon: "mdi-cogs", path: "/configuracion"}
                 ],
                 color: "primary",
                 colors: ["primary", "blue", "success", "red", "teal"],
