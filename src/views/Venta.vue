@@ -3,7 +3,7 @@
         <v-card class="mt-5" outlined>
             <v-row dense justify="center" align="center">
                 <v-col cols="8" class="px-5">
-                    <v-autocomplete class="mb-1" autofocus v-model="expediente" color="purple darken-4"
+                    <v-autocomplete class="mb-1" autofocus v-model="expediente"
                                     :items="expedientes"
                                     item-text="nombre_completo" hide-no-data label="Buscar Huésped"
                                     placeholder="Folio, Apellido paterno, Nombre(s)" prepend-icon="mdi-account-search"
@@ -133,11 +133,11 @@
                     }
                 ],
                 servicios: [
-                    {id: 1, nombre: 'HABITACIÓN SIMPLE', codigo: '019328', precio: 800, color: 'deep-purple darken-1'},
-                    {id: 2, nombre: 'HABITACIÓN DOBLE', codigo: '019257', precio: 1200, color: 'deep-purple darken-1'},
-                    {id: 3, nombre: 'ROOM SERVICE', codigo: '000443', precio: 250, color: 'deep-purple darken-1'},
-                    {id: 4, nombre: 'BUFFET', codigo: '000032', precio: 200, color: 'orange darken-3'},
-                    {id: 5, nombre: 'SPA', codigo: '000033', precio: 300, color: 'deep-orange darken-1'},
+                    {id: 1, nombre: 'HABITACIÓN SIMPLE', codigo: '019328', precio: 800, color: '#455A64'},
+                    {id: 2, nombre: 'HABITACIÓN DOBLE', codigo: '019257', precio: 1200, color: '#455A64'},
+                    {id: 3, nombre: 'ROOM SERVICE', codigo: '000443', precio: 250, color: '#78909C'},
+                    {id: 4, nombre: 'BUFFET', codigo: '000032', precio: 200, color: '#78909C'},
+                    {id: 5, nombre: 'SPA', codigo: '000033', precio: 300, color: '#90A4AE'},
                 ],
                 total: null
             }
@@ -158,13 +158,13 @@
     }
 
     thead, tfoot {
-        background-color: #6A1B9A !important;
+        background-color: #546E7A !important;
         border-bottom: solid 3px #0F362D;
         color: white;
     }
 
     thead tr th {
-        background-color: #6A1B9A !important;
+        background-color: #546E7A !important;
         border-bottom: solid 3px #0F362D;
         color: white !important;
         text-transform: uppercase;
@@ -176,7 +176,7 @@
     }
 
     tbody tr:hover td {
-        background-color: #BA68C8;
+        background-color: #B0BEC5;
         color: white;
         transition: all .3s ease;
     }
