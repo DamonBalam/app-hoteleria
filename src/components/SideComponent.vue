@@ -1,7 +1,7 @@
 <template>
     <v-navigation-drawer
             :v-model="true"
-            color="purple lighten-1"
+            color="blue-grey lighten-1"
             :expand-on-hover="expandOnHover"
             :mini-variant="miniVariant"
             :right="true"
@@ -23,7 +23,7 @@
 
             <v-divider></v-divider>
 
-            <v-list-item v-for="item in items" :key="item.title" link :to="item.path">
+            <v-list-item v-for="item in items" color="black" :key="item.title" link :to="item.path">
                 <v-list-item-icon>
                     <v-icon>{{ item.icon }}</v-icon>
                 </v-list-item-icon>
@@ -34,13 +34,13 @@
             </v-list-item>
 
             <!-- vehicular -->
-            <v-list-group prepend-icon="mdi-cog" color="white" no-action>
+            <v-list-group prepend-icon="mdi-cog" color="black" no-action>
                 <template v-slot:activator>
                     <v-list-item-title>Configuración</v-list-item-title>
                 </template>
 
                 <!-- Catálogos -->
-                <v-list-group sub-group  color="white" no-action>
+                <v-list-group sub-group  color="black" no-action>
                     <template v-slot:activator>
                         <v-list-item-title>Catálogos</v-list-item-title>
                     </template>

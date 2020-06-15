@@ -3,7 +3,7 @@
         <!-- menu lateral -->
         <SideComponent />
         <!-- barra de navegacion -->
-        <v-app-bar app color="purple lighten-1" dense dark :clipped-left="false">
+        <v-app-bar app color="blue-grey lighten-1" dense  dark :clipped-left="false" flat>
             <v-toolbar-title>HOTEL'S SYSTEM</v-toolbar-title>
 
             <v-spacer></v-spacer>

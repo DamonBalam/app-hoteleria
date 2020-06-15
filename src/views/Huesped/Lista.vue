@@ -18,7 +18,7 @@
                 <v-col cols="12" md="4" class="pt-4 text-right">
                     <v-btn
                             rounded
-                            color="purple lighten-1"
+                            color="blue lighten-1"
                             dark
                             to="/huesped-nuevo"
                     >NUEVO HUÉSPED
@@ -139,7 +139,7 @@
                         width: "10%"
                     },
                     {
-                        text: "TELéFONO",
+                        text: "TELÉFONO",
                         align: "center",
                         sortable: false,
                         value: "telefono",

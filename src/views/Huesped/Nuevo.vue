@@ -140,7 +140,7 @@
                         <v-spacer></v-spacer>
 
                         <v-btn
-                                color="purple darken-1"
+                                color="blue darken-1"
                                 :loading="loading"
                                 dark
                                 rounded
