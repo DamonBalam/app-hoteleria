@@ -48,7 +48,7 @@
                 items: [
                     {title: "Dashboard", icon: "mdi-view-dashboard", path: "/"},
                     {title: "Huéspedes", icon: "mdi-account-supervisor", path: "/huesped-lista"},
-                    {title: "Venta", icon: "mdi-cart", path: "/venta"},
+                    {title: "Venta", icon: "mdi-cart", path: "/punto-venta"},
                     {title: "Caja", icon: "mdi-inbox-full", path: "/caja"},
                     {title: "Reportes", icon: "mdi-file-chart", path: "/reportes"},
                     {title: "Configuración", icon: "mdi-cogs", path: "/configuracion"}
