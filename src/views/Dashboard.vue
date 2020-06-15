@@ -1,7 +1,11 @@
 <template>
-  <div>
-      Component Dashboard
-  </div>
+  <v-container>
+      <v-row dense justify="center" align="center">
+          <v-col md="12">
+                <span class="font-weight-bold"> DASHBOARD EN CONSTRUCCIÓN </span>
+          </v-col>
+      </v-row>
+  </v-container>
 </template>
 
 <script>

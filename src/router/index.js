@@ -26,6 +26,11 @@ const routes = [
         component: () => import(/* webpackChunkName: "PuntoVenta" */ '../views/Venta')
     },
     {
+        path: '/reportes',
+        name: 'Reporte',
+        component: () => import(/* webpackChunkName: "Reporte" */ '../views/Reportes')
+    },
+    {
         path: '/caja',
         name: 'Caja',
         component: () => import(/* webpackChunkName: "Caja" */ '../views/Caja')
@@ -34,7 +39,7 @@ const routes = [
 
 const router = new VueRouter({
     routes,
-    mode : 'history'
+    mode: 'history'
 })
 
 export default router
