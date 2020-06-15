@@ -1,6 +1,6 @@
 <template>
     <v-navigation-drawer
-            v-model="drawer"
+            :v-model="true"
             color="purple lighten-1"
             :expand-on-hover="expandOnHover"
             :mini-variant="miniVariant"
@@ -76,7 +76,7 @@
                     {title: "Dashboard", icon: "mdi-view-dashboard", path: "/"},
                     {title: "Huéspedes", icon: "mdi-account-supervisor", path: "/huesped-lista"},
                     {title: "Venta", icon: "mdi-cart", path: "/punto-venta"},
-                    {title: "Caja", icon: "mdi-inbox-full", path: "/caja"},
+                    {title: "Caja", icon: "mdi-cash-register", path: "/caja"},
                     {title: "Reportes", icon: "mdi-file-chart", path: "/reportes"}
                 ],
                 catalogos:[
@@ -99,9 +99,9 @@
             }
         },
         computed: {
-            drawer() {
-                return this.$store.state.drawer;
-            }
+            // drawer() {
+            //     return this.$store.state.drawer;
+            // }
         }
     };
 </script>
