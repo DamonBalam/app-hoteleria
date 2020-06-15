@@ -1,108 +1,111 @@
 <template>
-    <v-container>
-        <v-row dense no-gutters class="pa-5">
-            <v-col cols="12" md="4" class="pt-4">
-                <span class="headline">LISTA DE HUÉSPEDES</span>
-            </v-col>
+    <v-container fluid>
+        <v-card outlined class="mt-10">
+            <v-row dense no-gutters class="pa-5">
+                <v-col cols="12" md="4" class="pt-4">
+                    <span class="headline">LISTA DE HUÉSPEDES</span>
+                </v-col>
 
-            <v-col cols="12" md="4">
-                <v-text-field
-                        v-model="buscar"
-                        append-icon="mdi-account-search"
-                        label="BUSCAR HUÉSPED"
-                        single-line
-                        hide-details
-                ></v-text-field>
-            </v-col>
-            <v-col cols="12" md="4" class="pt-4 text-right">
-                <v-btn
-                        rounded
-                        color="purple lighten-1"
-                        dark
-                        to="/huesped-nuevo"
-                >NUEVO HUÉSPED
-                    <v-icon right>mdi-chevron-right</v-icon>
-                </v-btn>
-            </v-col>
-        </v-row>
-        <v-divider class="pa-1"></v-divider>
-        <v-row dense class="pa-5" no-gutters>
-            <v-col cols="12" class="pa-0">
-                <v-data-table
-                        class="ma-2 pa-0"
-                        :items-per-page="12"
-                        hide-default-footer
-                        no-data-text="No hay registros"
-                        no-results-text="No se encontraron registros"
-                        :page.sync="pagina"
-                        @page-count="pageCount = $event"
-                        :headers="headers"
-                        :items="catalogo_huespedes"
-                        :search="buscar"
-                        multi-sort
-                >
-                    <template v-slot:item.folio="{ item }">
+                <v-col cols="12" md="4">
+                    <v-text-field
+                            v-model="buscar"
+                            append-icon="mdi-account-search"
+                            label="BUSCAR HUÉSPED"
+                            single-line
+                            hide-details
+                    ></v-text-field>
+                </v-col>
+                <v-col cols="12" md="4" class="pt-4 text-right">
+                    <v-btn
+                            rounded
+                            color="purple lighten-1"
+                            dark
+                            to="/huesped-nuevo"
+                    >NUEVO HUÉSPED
+                        <v-icon right>mdi-chevron-right</v-icon>
+                    </v-btn>
+                </v-col>
+            </v-row>
+            <v-divider class="pa-1"></v-divider>
+            <v-row dense class="pa-5" no-gutters>
+                <v-col cols="12" class="pa-0">
+                    <v-data-table
+                            class="ma-2 pa-0"
+                            :items-per-page="12"
+                            hide-default-footer
+                            no-data-text="No hay registros"
+                            no-results-text="No se encontraron registros"
+                            :page.sync="pagina"
+                            @page-count="pageCount = $event"
+                            :headers="headers"
+                            :items="catalogo_huespedes"
+                            :search="buscar"
+                            multi-sort
+                    >
+                        <template v-slot:item.folio="{ item }">
                         <span class="font-weight-bold">
                             {{ item.folio }}
                         </span>
-                    </template>
+                        </template>
 
 
-                    <!-- acciones -->
-                    <template v-slot:item.action="{ item }">
-                        <v-tooltip bottom>
-                            <template v-slot:activator="{ on }">
-                                <v-btn
-                                        fab
-                                        dark
-                                        small
-                                        text
-                                        :to="item"
-                                >
-                                    <v-icon
-                                            v-on="on"
+                        <!-- acciones -->
+                        <template v-slot:item.action="{ item }">
+                            <v-tooltip bottom>
+                                <template v-slot:activator="{ on }">
+                                    <v-btn
+                                            fab
+                                            dark
                                             small
-                                            color="blue"
-                                    >mdi-pencil
-                                    </v-icon
+                                            text
+                                            :to="item"
                                     >
-                                </v-btn>
-                            </template>
-                            <span>Editar</span>
-                        </v-tooltip>
-                        <v-tooltip bottom>
-                            <template v-slot:activator="{ on }">
-                                <v-btn
-                                        fab
-                                        dark
-                                        small
-                                        text
-                                        :to="item"
-                                >
-                                    <v-icon
-                                            v-on="on"
+                                        <v-icon
+                                                v-on="on"
+                                                small
+                                                color="blue"
+                                        >mdi-pencil
+                                        </v-icon
+                                        >
+                                    </v-btn>
+                                </template>
+                                <span>Editar</span>
+                            </v-tooltip>
+                            <v-tooltip bottom>
+                                <template v-slot:activator="{ on }">
+                                    <v-btn
+                                            fab
+                                            dark
                                             small
-                                            color="warning"
-                                    >mdi-eye
-                                    </v-icon
+                                            text
+                                            :to="item"
                                     >
-                                </v-btn>
-                            </template>
-                            <span>Ver Hospedaje</span>
-                        </v-tooltip>
+                                        <v-icon
+                                                v-on="on"
+                                                small
+                                                color="warning"
+                                        >mdi-eye
+                                        </v-icon
+                                        >
+                                    </v-btn>
+                                </template>
+                                <span>Ver Hospedaje</span>
+                            </v-tooltip>
 
-                    </template>
+                        </template>
 
-                </v-data-table>
-                <div class="text-center pt-2">
-                    <v-pagination
-                            v-model="pagina"
-                            :length="pageCount"
-                            :total-visible="10"
-                    ></v-pagination>
-                </div>
-            </v-col>
-        </v-row>
+                    </v-data-table>
+                    <div class="text-center pt-2">
+                        <v-pagination
+                                v-model="pagina"
+                                :length="pageCount"
+                                :total-visible="10"
+                        ></v-pagination>
+                    </div>
+                </v-col>
+            </v-row>
+        </v-card>
+
     </v-container>
 </template>
 
